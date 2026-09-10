@@ -27,5 +27,9 @@ inputs = {
   address_space       = local.env.address_space
   app_subnet_name     = "snet-app"
   app_subnet_prefixes = local.env.app_subnet_prefixes
-  tags                = local.env.tags
+
+  application_gateway_subnet_name     = local.env.application_gateway_subnet_name
+  application_gateway_subnet_prefixes = local.env.application_gateway_subnet_prefixes
+
+  tags = local.env.tags
 }

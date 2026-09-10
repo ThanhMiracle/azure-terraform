@@ -11,7 +11,7 @@ terraform {
 }
 
 inputs = {
-  name     = "rg-${local.env.project_name}-${local.env.environment}"
-  location = local.env.location
-  tags     = local.env.tags
+  resource_group_name = "rg-${local.env.project_name}-${local.env.environment}"
+  location            = local.env.location
+  tags                = local.env.tags
 }
