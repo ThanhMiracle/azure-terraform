@@ -28,6 +28,14 @@ locals {
   application_gateway_rule_priority    = 100
   application_gateway_enable_http2     = true
 
+  # PostgreSQL Flexible Server
+  postgresql_subnet_prefixes       = ["10.10.4.0/24"]
+  postgresql_administrator_login   = "pgadmin"
+  postgresql_version               = "16"
+  postgresql_sku_name              = "B_Standard_B1ms"
+  postgresql_storage_mb            = 32768
+  postgresql_backup_retention_days = 7
+
   # VM
   vm_size                         = "Standard_D4s_v3"
   vm_admin_username               = "azureadmin"

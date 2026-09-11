@@ -23,7 +23,22 @@ variable "app_subnet_prefixes" {
   type = list(string)
 }
 
+variable "application_gateway_subnet_name" {
+  description = "Name of the dedicated Application Gateway subnet"
+  type        = string
+}
+
+variable "application_gateway_subnet_prefixes" {
+  description = "Address prefixes for the dedicated Application Gateway subnet"
+  type        = list(string)
+}
+
 variable "tags" {
   type    = map(string)
   default = {}
+}
+
+variable "bastion_subnet_prefixes" {
+  description = "Address prefixes for Azure Bastion subnet"
+  type        = list(string)
 }

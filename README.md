@@ -140,6 +140,7 @@ terragrunt run --all apply
 ```
 
 $env:VM_ADMIN_PASSWORD = "YourStrongPasswordHere!"
+$env:POSTGRESQL_ADMIN_PASSWORD = "YourStrongPostgreSQLPasswordHere!"
 $env:SSH_SOURCE_ADDRESS_PREFIX = "$(Invoke-RestMethod 'https://api.ipify.org')/32"
 ## 6. Verify state in Azure Blob Storage
 

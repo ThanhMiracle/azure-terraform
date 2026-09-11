@@ -19,13 +19,17 @@ variable "subnet_id" {
 }
 
 variable "ssh_source_address_prefix" {
-  description = "Source CIDR allowed to connect to TCP port 22"
+  description = "Source CIDR allowed to connect via SSH"
   type        = string
-  default     = "*"
 }
 
 variable "tags" {
   description = "Tags applied to the network security group"
   type        = map(string)
   default     = {}
+}
+variable "ssh_destination_port" {
+  description = "Destination port for SSH"
+  type        = string
+  default     = "22"
 }

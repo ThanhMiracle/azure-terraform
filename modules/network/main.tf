@@ -12,3 +12,17 @@ resource "azurerm_subnet" "app" {
   virtual_network_name = azurerm_virtual_network.this.name
   address_prefixes     = var.app_subnet_prefixes
 }
+
+resource "azurerm_subnet" "application_gateway" {
+  name                 = var.application_gateway_subnet_name
+  resource_group_name  = var.resource_group_name
+  virtual_network_name = azurerm_virtual_network.this.name
+  address_prefixes     = var.application_gateway_subnet_prefixes
+}
+
+resource "azurerm_subnet" "bastion" {
+  name                 = "AzureBastionSubnet"
+  resource_group_name  = var.resource_group_name
+  virtual_network_name = azurerm_virtual_network.this.name
+  address_prefixes     = var.bastion_subnet_prefixes
+}
